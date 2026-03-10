@@ -1,0 +1,302 @@
+*{
+    font-style: serif;
+    cursor: url('pearl.png'), auto;
+    
+}
+h1{
+    color : lightgrey;
+    size: 580px;
+}
+h2{
+    margin: 50px;
+}
+h3{
+    margin: 50px;
+}
+
+body{
+    background-color:aliceblue;
+    overflow:hidden;
+    color:#020150;
+    overflow: auto;
+    
+    font-family: Helvetica Neue, Arial, Helvetica, sans-serif;
+   
+}
+.container {
+    display: flex;
+    align-items: center; /* Vertically align items to the center */
+    width: 100%;           /* Adjust the width to your liking */
+      /* Max width */
+  }
+
+  /* Left and right text containers */
+  .left, .right {
+    flex: 1;              /* Take up equal space on both sides */
+    padding: 20px;        /* Add padding around the text */
+  }
+
+  /* Divider line */
+  .divider {
+    border-left: 2px dashed #000; /* Dashed line */
+  height: 100%;  /* Set the color of the line */
+  }
+
+  /* Style for the text */
+  .left, .right {
+    text-align: center; /* Center text horizontally */
+    font-size: 1.2em;
+  }
+
+
+#image-track > .image {
+    width:30vmin;
+    height: 46vmin;
+    object-fit: cover;
+    object-position: center;
+}
+#image-track {
+    display: flex;
+    gap: 4vmin;
+    position: absolute;
+    
+    
+}
+
+button{
+    font-size: 25px;
+    
+}
+
+nav  {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav ul{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav ul li:last-child {
+    display: flex;
+    gap: 10px;
+}
+
+
+ul li{
+    list-style:disc;
+    display:inline-block;
+    float:left;
+    line-height: 100px;
+}
+
+ul li a{
+    text-decoration: none;
+    padding:0 20px;
+    color: darkgray;
+    display:block;
+    transition: transform 0.3s 
+}
+ul li a:hover{
+    color:#020150;
+    transform:translatey(-10px);
+}
+
+
+img:fish{
+    width: 80px;
+}
+
+ul img{
+    height: 25px;
+}
+
+.imgcrop{
+    height : 350px;
+    width  : 350px;
+    object-fit: cover;
+    object-position: center;
+    margin-left: 80px;
+}
+
+
+.resume-picker button {
+    border: none;
+    background: none;
+    padding: 10px;
+    cursor: pointer;
+    transition: transform .01s ease; /* Smooth transition */
+  }
+  
+  .resume-picker img {
+    width: 500px;  /* Adjust the size to suit your needs */
+    height: 500px; /* Adjust the size */
+    margin-left:110px;
+     
+  }
+  
+  .resume-picker button:hover {
+    opacity: 0.8;  /* Add hover effect */
+  }
+  .resume-picker button:hover img {
+    transform: scale(1.1); /* Make the image 10% larger */
+  }
+
+
+.skills {
+    border-radius: 20%;
+    margin: 15px;
+}
+ 
+  
+
+
+
+
+
+nav{
+    height:12vmin;
+    width:100%;
+    background-color: white;
+    
+}
+body{
+    font-family: Arial, sans-serif;
+    background:#f5f5f5;
+}
+
+.title{
+    text-align:center;
+}
+
+.projects-title{
+    text-align:center;
+    margin-top:30px;
+}
+
+.tabs{
+    display:flex;
+    justify-content:center;
+    margin-top:20px;
+    gap:15px;
+}
+
+.tab{
+    padding:10px 25px;
+    border:none;
+    background:#e0e0e0;
+    border-radius:8px;
+    cursor:pointer;
+    font-size:16px;
+}
+
+.tab:hover{
+    background:#d0d0d0;
+}
+
+.tab.active{
+    background:#4CAF50;
+    color:white;
+}
+
+.projects-container{
+    width:70%;
+    margin:auto;
+    margin-top:40px;
+}
+
+.tab-content{
+    display:none;
+}
+
+.tab-content.active{
+    display:block;
+}
+
+.project-card{
+    background:white;
+    padding:25px;
+    border-radius:12px;
+    box-shadow:0px 4px 10px rgba(0,0,0,0.1);
+    margin-bottom:20px;
+}
+
+.project-card h3{
+    margin-top:0;
+}
+
+.project-card a{
+    text-decoration:none;
+    color:#4CAF50;
+    font-weight:bold;
+}
+.dropdown-content{
+    max-height:0;
+    overflow:hidden;
+    transition:max-height 0.4s ease;
+  }
+  .timeline-horizontal{
+    display:flex;
+    justify-content:space-between;
+    align-items:flex-start;
+    position:relative;
+    max-width:1000px;
+    margin:60px auto;
+    padding-top:60px; /* space for dots above cards */
+  }
+  
+  /* horizontal line */
+  .timeline-horizontal::before{
+    content:"";
+    position:absolute;
+    top:40px; /* move line lower so dots are above cards */
+    left:0;
+    width:100%;
+    height:4px;
+    background:#555;
+    z-index:1;
+  }
+  
+  /* event container */
+  .timeline-event{
+    position:relative;
+    text-align:center;
+    width:180px;
+  }
+  
+  /* dot above card */
+  .timeline-event::before{
+    content:"";
+    position:absolute;
+    top:0; /* move dot to top of container */
+    left:50%;
+    transform:translateX(-50%);
+    width:16px;
+    height:16px;
+    background:white;
+    border:4px solid #555;
+    border-radius:50%;
+    z-index:2;
+  }
+  
+  /* card */
+  .timeline-card{
+    background:white;
+    padding:12px;
+    border-radius:8px;
+    box-shadow:0 4px 10px rgba(0,0,0,0.2);
+    margin-top:30px; /* space below dot */
+    transition:transform .3s;
+  }
+  
+  /* hover animation */
+  .timeline-card:hover{
+    transform:translateY(-8px);
+  }
+  .timeline-horizontal{
+    overflow-x:auto;
+    gap:40px;
+  }
