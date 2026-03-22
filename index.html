@@ -1,56 +1,216 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <link rel="stylesheet" href="chana.css"/>
-    <script src="chana.js"></script>
+    <meta charset="UTF-8">
+    <title>Chana346</title>
+
+    <link rel="stylesheet" href="chana.css">
+    <script src="chana.js" defer></script>
 </head>
+
 <body>
-<h1><center>Chana346</center>  </h1>
 
 
 
-
-<ul>
-    <li><img src = flower.jpg class = "imgcrop" ></li>
-    <li><img  src = " me2.jpeg " class = "imgcrop"></li>
-    <li><img  src = "wave.png" class = "imgcrop">
-    </li>
-</ul>
+<!-- IMAGE STRIP -->
 
 
 
+<!-- NAVBAR -->
 <nav>
-    <ul>
+    <ul class="nav-links">
+
         <li><a href="index.html">Home</a></li>
         <li><a href="pictures.html">Pictures</a></li>
         <li><a href="resume.html">Resume</a></li>
         <li><a href="contact.html">Contact</a></li>
         <li><a href="projects.html">Projects</a></li>
-        <li><a href="travel.html">Travel</a></li>
-        <li> 
-            <img src="linkedInd.png" style="margin-left: 680px;" >
-            <img src="github.png" >
-        </li>
-   </ul>
+        <li><a href="Experience.html">Experience</a></li>
 
+        <li class="social">
+            <img src="linkedInd.png">
+            <img src="github.png">
+        </li>
+
+    </ul>
 </nav>
 
-<div class="container">
-    <div class="left">
-      <p>Hello, my name is Chantelle Troutman and i'm 19 years old. my favorite song is plastic jesus. My favoritve band is ween
-        I'm currently studying computer science and UCSC.</p>
+
+<!-- HERO VIDEO -->
+<section class="hero">
+
+    <video autoplay muted loop class="bg-video">
+        <source src="assets/HomeVideo.mp4" type="video/mp4">
+    </video>
+
+    <div class="overlay"></div>
+
+    <div class="hero-content">
+        <h1>Chantelle Troutman</h1>
+        <h2>Computer Science Student</h2>
+        <p>University of California, Santa Cruz</p>
     </div>
-    <div class="divider"></div>
-    <div class="right">
-      <img src = "plasticJesus.png" height=200px>
-      <p>favorite Movies: perfect blue, Gummo, and</p>
-      <p>Hobbies: yoga, knitting, coding, and hiking</p>
+
+</section>
+
+
+<!-- SKILLS SECTION -->
+<section class="skills-section">
+    <h2 class="skills-title">Technical Skills</h2>
+    <div class="skills-grid">
+      <div class="skill-card reveal">
+        <h3> Languages</h3>
+        <ul>
+          <li>C</li>
+          <li>Python</li>
+          <li>Java</li>
+          <li>JavaScript</li>
+          <li>Haskell</li>
+          <li>HTML / CSS</li>
+        </ul>
+      </div>
+      <div class="skill-card reveal">
+        <h3>Tools</h3>
+        <ul>
+          <li>Git / GitHub</li>
+          <li>VS Code</li>
+          <li>Android Studio</li>
+        </ul>
+      </div>
+      <div class="skill-card reveal">
+        <h3> Concepts</h3>
+        <ul>
+          <li>Data Structures</li>
+          <li>Machine Learning</li>
+          <li>Functional Programming</li>
+          <li>Assembly</li>
+        </ul>
+      </div>
+      <div class="skill-card reveal">
+        <h3> Crafts</h3>
+        <ul>
+          <li>Welding</li>
+          <li>Sewing</li>
+          <li>Knitting</li>
+          <li>Fabrication</li>
+        </ul>
+      </div>
     </div>
-</div>
+    <div class="skills-dots" id="skills-dots">
+        <span class="sdot"></span>
+        <span class="sdot"></span>
+        <span class="sdot"></span>
+        <span class="sdot"></span>
+        <span class="sdot"></span>
+        <span class="sdot"></span>
+        <span class="sdot"></span>
+        <span class="sdot"></span>
+        <span class="sdot"></span>
+        <span class="sdot"></span>
+        <span class="sdot"></span>
+        <span class="sdot"></span>
+        <span class="sdot"></span>
+        <span class="sdot"></span>
+        <span class="sdot"></span>
+        <span class="sdot"></span>
+        <span class="sdot"></span>
+        <span class="sdot"></span>
+        <span class="sdot"></span>
+        <span class="sdot"></span>
+      </div>
+  </section>
 
 
-      
+  <section class="Luna-section">
 
-<div class = "cursor" ></div>
+    <!-- Project Summary -->
+    <div class="Luna-summary">
+      <div class="Luna-summary-inner">
+        <span class="Luna-tag">Senior Thesis · Phase 1</span>
+        <h2 class="Luna-title">Luna Yoga</h2>
+        <p class="Luna-subtitle">A personalized yoga companion app built from scratch as a senior thesis project at UC Santa Cruz. Phase 1 covers the full frontend architecture and a Node.js backend with user authentication, session tracking, and a pose recommendation engine. Designed with accessibility and flow in mind — Luna meets you wherever you are in your practice.</p>
+        <div class="Luna-meta">
+          <span> React Native · Node.js · Supabase</span>
+          <span> 2025</span>
+          <span> Solo Project</span>
+        </div>
+      </div>
+    </div>
+  
+    <!-- Carousel -->
+    <div class="Luna-carousel">
+  
+      <!-- Left: descriptions -->
+      <div class="Luna-descriptions">
+        <div class="Luna-desc active">
+          <span class="Luna-screen-num">01 / 04</span>
+          <h3>Login Screen</h3>
+          <p>A calm, minimal entry point where users sign in to their personalized yoga journey. Supports email/password auth with secure token handling on the backend. First impressions matter — the login sets Luna's meditative tone from the start.</p>
+        </div>
+        <div class="Luna-desc">
+          <span class="Luna-screen-num">02 / 04</span>
+          <h3>Collective</h3>
+          <p>The heart of the app — a personal dashboard showing weekly streaks, completed sessions, and AI-curated recommendations based on your history. Designed to motivate without overwhelming, using soft data visualizations and gentle nudges.</p>
+        </div>
+        <div class="Luna-desc">
+          <span class="Luna-screen-num">03 / 04</span>
+          <h3>Settings</h3>
+          <p>Full user control over experience preferences — notification timing, difficulty level, preferred yoga styles, and accessibility options. Clean toggle-based UI that respects user autonomy and keeps customization friction-free.</p>
+        </div>
+        <div class="Luna-desc">
+          <span class="Luna-screen-num">04 / 04</span>
+          <h3>Yoga Types</h3>
+          <p>An explorable library of yoga disciplines — from restorative Yin to dynamic Vinyasa — each with descriptions, difficulty ratings, and curated session paths. Users can favorite styles to shape their recommendation feed.</p>
+        </div>
+      </div>
+  
+      <!-- Right: images -->
+      <div class="Luna-images">
+        <div class="Luna-track">
+          <div class="Luna-card"><img src="/assets/Luna/Login.png" alt="Login"></div>
+          <div class="Luna-card"><img src="/assets/Luna/collective.png" alt="Collective"></div>
+          <div class="Luna-card"><img src="/assets/Luna/Settings.png" alt="Settings"></div>
+          <div class="Luna-card"><img src="/assets/Luna/YogaTypes.png" alt="Yoga Types"></div>
+        </div>
+        <button class="Luna-prev">&#8592;</button>
+        <button class="Luna-next">&#8594;</button>
+        <div class="Luna-dots"></div>
+      </div>
+  
+    </div>
+  </section>
+
+  <section class = Pacman-section>
+    <!-- Project Summary -->
+    <div class="Luna-summary">
+      <!--<div class="pixel-bg"></div>-->
+      <div class="Pacman-summary-inner">
+        <span class="Luna-tag">Capston Class/Project · CSE140</span>
+        <h2 class="Pacman-title">PacMan: Capture the Flag</h2>
+        <p class="Pacman-subtitle">Developed intelligent agents for a competitive Capture the Flag variant of Pac-Man. The project required designing both offensive and defensive agents capable of strategic decision-making in a dynamic, adversarial environment. Our team implemented the A* search algorithm to optimize pathfinding and real-time gameplay decisions. The agents successfully competed against other teams, earning 5th place in the final tournament. </p>
+        <div class="Luna-meta">
+          <span> AI · Python · A*</span>
+          <span> 2026</span>
+          <span> Group Project</span>
+        </div>
+      </div>
+    </div>
+    <!-- Toggle Buttons-->
+    <div class="pacman-toggle">
+      <button onclick="showSection('demo')" class="pacman-btn">Pac-Man Demo</button>
+      <a href="assets/Report.pdf" target="_blank" class="pacman-btn">Written Report</a>
+      <button onclick="showSection('play')" class="pacman-btn">Play</button>
+    </div>
+
+    <div id="demo" style="display:none;">
+      <h2>Pac-Man Demo</h2>
+    
+      <video width="600" controls>
+        <source src="assets/pacman-demo.mp4" type="video/mp4">
+      </video>
+    </div>
+
+  </section>
+
 </body>
 </html>
