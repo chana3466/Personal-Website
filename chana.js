@@ -314,3 +314,15 @@ if (!pacmanSection) {
     pacmanSection.appendChild(pixel);
   }
 }
+const strip = document.querySelector('.moon-strip-inner');
+const images = Array.from(strip.children);
+
+// Duplicate all images to make seamless loop
+images.forEach(img => {
+  const clone = img.cloneNode(true);
+  clone.src = img.src; // make sure src is preserved
+  strip.appendChild(clone);
+});
+
+// Add class to trigger animation AFTER duplication
+strip.classList.add('scrolling');

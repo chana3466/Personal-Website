@@ -16,14 +16,18 @@
 
         <li><a href="index.html">Home</a></li>
        <!-- <li><a href="pictures.html">Pictures</a></li>-->
-        <li><a href="resume.html">Resume</a></li>
+        <li><a href="assets/Chantelle_Troutman_Resume-2.pdf" target="_blank">Resume</a></li>
         <li><a href="contact.html">Contact</a></li>
         <li><a href="projects.html">Projects</a></li>
         <li><a href="Experience.html">Experience</a></li>
 
         <li class="social">
-            <img src="linkedInd.png">
-            <img src="github.png">
+            <a href="https://www.linkedin.com/in/chantelle-troutman-b953033a5/" target="_blank">
+              <img src="../linkedInd.png" alt="LinkedIn">
+            </a>
+            <a href="https://github.com/chana3466" target="_blank">
+              <img src="../github.png" alt="GitHub">
+            </a>
         </li>
 
     </ul>
@@ -50,6 +54,28 @@
 
 <!-- SKILLS SECTION -->
   <section class="skills-section">
+    <div class="skills-dots" id="skills-dots">
+      <span class="sdot"></span>
+      <span class="sdot"></span>
+      <span class="sdot"></span>
+      <span class="sdot"></span>
+      <span class="sdot"></span>
+      <span class="sdot"></span>
+      <span class="sdot"></span>
+      <span class="sdot"></span>
+      <span class="sdot"></span>
+      <span class="sdot"></span>
+      <span class="sdot"></span>
+      <span class="sdot"></span>
+      <span class="sdot"></span>
+      <span class="sdot"></span>
+      <span class="sdot"></span>
+      <span class="sdot"></span>
+      <span class="sdot"></span>
+      <span class="sdot"></span>
+      <span class="sdot"></span>
+      <span class="sdot"></span>
+    </div>
     <h2 class="skills-title">Technical Skills</h2>
     <div class="skills-grid">
       <div class="skill-card reveal">
@@ -90,31 +116,25 @@
         </ul>
       </div>
     </div>
-    <div class="skills-dots" id="skills-dots">
-        <span class="sdot"></span>
-        <span class="sdot"></span>
-        <span class="sdot"></span>
-        <span class="sdot"></span>
-        <span class="sdot"></span>
-        <span class="sdot"></span>
-        <span class="sdot"></span>
-        <span class="sdot"></span>
-        <span class="sdot"></span>
-        <span class="sdot"></span>
-        <span class="sdot"></span>
-        <span class="sdot"></span>
-        <span class="sdot"></span>
-        <span class="sdot"></span>
-        <span class="sdot"></span>
-        <span class="sdot"></span>
-        <span class="sdot"></span>
-        <span class="sdot"></span>
-        <span class="sdot"></span>
-        <span class="sdot"></span>
-      </div>
+
   </section>
-
-
+  <div class="moon-strip">
+    <div class="moon-strip-inner scrolling">
+      <div class="moon-img-wrapper"><img src="/assets/moon1.png" alt="Moon 1"></div>
+      <div class="moon-img-wrapper"><img src="/assets/moon2.png" alt="Moon 2"></div>
+      <div class="moon-img-wrapper"><img src="/assets/moon1.png" alt="Moon 1"></div>
+      <div class="moon-img-wrapper"><img src="/assets/moon2.png" alt="Moon 2"></div>
+      <div class="moon-img-wrapper"><img src="/assets/moon1.png" alt="Moon 1"></div>
+      <div class="moon-img-wrapper"><img src="/assets/moon2.png" alt="Moon 2"></div>
+      <div class="moon-img-wrapper"><img src="/assets/moon1.png" alt="Moon 1"></div>
+      <div class="moon-img-wrapper"><img src="/assets/moon2.png" alt="Moon 2"></div>
+      <div class="moon-img-wrapper"><img src="/assets/moon1.png" alt="Moon 1"></div>
+      <div class="moon-img-wrapper"><img src="/assets/moon2.png" alt="Moon 2"></div>
+      <div class="moon-img-wrapper"><img src="/assets/moon1.png" alt="Moon 1"></div>
+      <div class="moon-img-wrapper"><img src="/assets/moon2.png" alt="Moon 2"></div>
+      <!-- repeat as needed -->
+    </div>
+  </div>
   <section class="Luna-section">
 
     <div class="Luna-layout">
@@ -128,9 +148,10 @@
             <span class="Luna-tag">Senior Thesis · Phase 1</span>
             <h2 class="Luna-title">Luna Yoga</h2>
             <p class="Luna-subtitle">
-              A personalized yoga companion app built from scratch as a senior thesis project at UC Santa Cruz.
-              Phase 1 covers the full frontend architecture and a Node.js backend with user authentication,
-              session tracking, and a pose recommendation engine.
+              The app aims to integrate moon phases and menstrual cycles with yoga practices to provide a personalized wellness experience. 
+              In Phase 1, the focus was on developing the front-end interface, allowing users to view and interact with the core features. 
+              All visual elements and navigation are now fully implemented, laying the foundation for future phases where recommendations 
+              and personalized experiences will be added.
             </p>
             <div class="Luna-meta">
               <span>React Native · Node.js · Supabase</span>
@@ -175,19 +196,17 @@
         <div class="Luna-images">
   
           <div class="Luna-track">
-            <div class="Luna-card"><img src="/assets/Luna/Login.png"></div>
-            <div class="Luna-card"><img src="/assets/Luna/collective.png"></div>
-            <div class="Luna-card"><img src="/assets/Luna/Settings.png"></div>
-            <div class="Luna-card"><img src="/assets/Luna/YogaTypes.png"></div>
+            <div class="Luna-card"><img src="assets/Luna/Login.png"></div>
+            <div class="Luna-card"><img src="assets/Luna/collective.png"></div>
+            <div class="Luna-card"><img src="assets/Luna/Settings.png"></div>
+            <div class="Luna-card"><img src="assets/Luna/YogaTypes.png"></div>
           </div>
-  
-          <div class="Luna-dots"></div>
-  
         </div>
+        
+        <button class="Luna-next">&#8594;</button>
+        <div class="Luna-dots"></div>
       </div>
-      <button class="Luna-next">&#8594;</button>
-
-  
+      
     </div>
   
   </section>
@@ -206,12 +225,10 @@
           the A* search algorithm to optimize pathfinding and real-time gameplay decisions.
           The agents successfully competed against other teams, earning 5th place in the final tournament.
         </p>
-        <div class="Luna-meta">
-          <span>AI · Python · A*</span>
-          <span>2026</span>
-          <span>Group Project</span>
-        </div>
+        <a href="assets/Report.pdf" target="_blank" class="pacman-btn" >Written Report</a>
+        
       </div>
+      
     </div>
     <div class="pacman-wall"></div>
   
@@ -220,7 +237,7 @@
   
       <!-- LEFT: Video -->
       <div class="Pacman-video">
-        <video width="600" controls>
+        <video autoplay muted loop playsinline width="600" controls>
           <source src="assets/Videos/PacMan.mov" type="video/mp4">
         </video>
       </div>
@@ -229,17 +246,14 @@
       <div class="Pacman-demo-description">
         <h3 style="font-family: 'retro', sans-serif;">Demo Walkthrough</h3>
         <p style="font-family: 'retro', sans-serif;">
-          In this demo, the agents navigate the maze in real-time. The offensive agent prioritizes
-          collecting food and capturing the opponent's flag, while the defensive agent guards
-          our territory and intercepts opponents. Observe how A* pathfinding allows intelligent
-          movement around obstacles and dynamically reacts to opponent actions.
+          In this demo, the agents on the <strong>red team</strong> navigate the maze in real-time using <strong>A*</strong> pathfinding. 
+          The offensive agent focuses on collecting food and capturing the opponent’s flag, while the defensive agent guards 
+          our territory and intercepts opponents. Watch how A* allows intelligent movement around obstacles and dynamically reacts to the blue team’s actions.
         </p>
-        <p>
-          The agents’ decision-making highlights strategies like risk assessment, threat evaluation,
-          and cooperative behavior. This setup demonstrates both the AI logic and the competitive
-          dynamics in a live game environment.
+        <p style="font-family: 'retro', sans-serif;color: lightblue">
+          This setup highlights key AI strategies such as risk assessment, threat evaluation, and cooperative behavior. 
+          The red team agents are designed to outperform the <strong>baseline blue team</strong>, demonstrating both competitive dynamics and advanced AI decision-making in a live game environment.
         </p>
-        <a href="assets/Report.pdf" target="_blank" class="pacman-btn">Written Report</a>
       </div>
   
     </div>
