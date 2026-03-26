@@ -1,6 +1,7 @@
 /* =====================
    IMAGE TRACK DRAG
    ===================== */
+  
    const track = document.getElementById('image-track');
    if (track) {
      track.dataset.mouseDownAt = "0";
@@ -228,10 +229,7 @@ function updateDots() {
    
        skillsSection.style.backgroundColor = lerpColor(bgColors[index], bgColors[index + 1], t);
    
-       const newCardBg = lerpColor(cardColors[index], cardColors[index + 1], t);
-       document.querySelectorAll('.skill-card').forEach(card => {
-         card.style.backgroundColor = newCardBg;
-       });
+
      }
    
      checkSkillCards();
@@ -282,31 +280,35 @@ function updateDots() {
      });
    }
 
-   function showSection(section) {
-    document.getElementById('play').style.display = 'none';
-    document.getElementById('demo').style.display = 'none';
-  
-    document.getElementById(section).style.display = 'block';
-  }
+   function showSection(sectionId) {
+    // Hide all sections first
+    const sections = document.querySelectorAll('#demo, #play');
+    sections.forEach(section => {
+        section.style.display = 'none';
+    });
 
-  const pacmanSection = document.querySelector('.Pacman-section');
+    // Show the selected one
+    const selected = document.getElementById(sectionId);
+    if (selected) {
+        selected.style.display = 'block';
+    }
+}
 
-if (pacmanSection) {
+const pacmanSection = document.querySelector('.Pacman-section');
+
+if (!pacmanSection) {
+  console.error("Pacman section not found!");
+} else {
   for (let i = 0; i < 50; i++) {
     const pixel = document.createElement('div');
     pixel.classList.add('pixel');
 
-    // random horizontal position
     pixel.style.left = Math.random() * 100 + '%';
 
-    // random animation duration
     const duration = 4 + Math.random() * 6;
     pixel.style.animationDuration = duration + 's';
 
-    // random delay so they don't all move together
     pixel.style.animationDelay = Math.random() * 5 + 's';
-
-    // random opacity
     pixel.style.opacity = Math.random() * 0.5 + 0.2;
 
     pacmanSection.appendChild(pixel);

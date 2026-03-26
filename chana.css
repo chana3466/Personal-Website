@@ -37,7 +37,7 @@
      NAVBAR
      ===================== */
   nav {
-    position: sticky;
+    position: fixed;
     top: 0;
     height: 12vmin;
     width: 100%;
@@ -55,6 +55,7 @@
     list-style: none;
     padding: 0;
     margin: 0;
+    width: 95%;
   }
   
   nav ul li {
@@ -99,6 +100,7 @@
     width: 100%;
   }
   nav ul li.social {
+    margin-left: auto;
     display: flex;
     gap: 10px;
     align-items: center;
@@ -528,41 +530,7 @@
   /* =====================
      LUNA SECTION
      ===================== */
-   .Luna-section {
-      padding: 100px 8%;
-      background: linear-gradient(
-        to bottom,
-        #f7f4ef 0%,   /* Luna base (light) */
-        #e9e4db 50%,  /* soft middle */
-        #1f1f1f 100%  /* fade into Pacman dark */
-      );
-      border-top: none; /* optional: remove hard line */
-  } 
-  .Luna-summary {
-    margin-bottom: 70px;
-  }
-  
-  .Luna-summary-inner {
-    max-width: 750px;
-  }
-  
-  .Luna-tag {
-    display: inline-block;
-    font-size: 12px;
-    font-weight: 600;
-    letter-spacing: 2px;
-    text-transform: uppercase;
-    color: #888;
-    margin-bottom: 16px;
-  }
-  
-  .Luna-title {
-    font-size: 3rem;
-    font-weight: 700;
-    letter-spacing: -1px;
-    color: #020150;
-    margin: 0 0 20px 0;
-  }
+
   .Pacman-title {
     font-family: 'retro', sans-serif;
     font-size: 3rem;
@@ -571,100 +539,168 @@
     color: lightyellow;
     margin: 0 0 20px 0;
   }
-  
-  .Luna-subtitle {
-    font-size: 1.1rem;
-    line-height: 1.8;
-    color: #444;
-    
-    margin-bottom: 28px;
+  .Pacman-demo {
+    font-family: 'retro', sans-serif;
+    font-size: 2rem;
+    text-align: center;
+    font-weight: 700;
+    letter-spacing: -1px;
+    color: lightyellow(107, 107, 91);
+    margin: 0 0 20px 0;
+    margin-top: 3%;
   }
+  
+
   .Pacman-subtitle {
     font-family: 'retro', sans-serif;
     font-size: 1.1rem;
     line-height: 1.8;
     color:lightgray;
-    max-width: 680px;
+    max-width: none;
     margin-bottom: 28px;
+  }
+  .Pacman-demo-layout {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px;
+    margin-top: 40px;
+    max-width: 1200px;
+  }
+  
+  .Pacman-video {
+    flex: 1 1 600px;
+  }
+  
+  .Pacman-video video {
+    width: 100%;
+    display: block;
+    border-radius: 10px;
+  }
+  
+  .Pacman-demo-description {
+    flex: 1 1 500px;
+  }
+  
+  .Pacman-demo-description h3 {
+    margin-top: 0;
+    font-size: 1.5rem;
+  }
+  
+  .Pacman-demo-description p {
+    line-height: 1.6;
+    margin-bottom: 1rem;
+  }
+  .pacman-wall {
+    width: 100%;
+    height: 20px;               /* height of the wall */
+    background-color: transparent; /* transparent inside */
+    border: 4px solid #00008B;  /* dark blue border */
+    margin: 40px 0;             /* space above and below */
+    border-radius: 4px;         /* slightly rounded corners */
+    box-sizing: border-box;     /* ensures border is included in height */
+  }
+  
+/* =====================
+   LUNA SECTION
+   ===================== */
+
+   .Luna-section {
+    padding: 100px 8%;
+    background: linear-gradient(to bottom, #f7f4ef, #e9e4db, #1f1f1f);
+  }
+  
+  /* MAIN LAYOUT */
+  .Luna-layout {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 80px;
+  }
+  
+  /* LEFT COLUMN */
+  .Luna-left {
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+  }
+  
+  /* SUMMARY */
+  .Luna-summary-inner {
+    max-width: 500px;
+  }
+  
+  .Luna-tag {
+    font-size: 12px;
+    letter-spacing: 2px;
+    color: #888;
+  }
+  
+  .Luna-title {
+    font-size: 3rem;
+    color: #020150;
+    margin: 10px 0;
+  }
+  
+  .Luna-subtitle {
+    color: #444;
+    line-height: 1.7;
   }
   
   .Luna-meta {
+    margin-top: 15px;
     display: flex;
-    gap: 30px;
-    flex-wrap: wrap;
-    font-size: 14px;
-    color: #666;
+    gap: 10px;
   }
   
   .Luna-meta span {
     background: white;
-    border: 1px solid #ddd;
-    padding: 6px 14px;
+    padding: 5px 12px;
     border-radius: 20px;
+    font-size: 12px;
   }
   
-  .Luna-carousel {
-    display: flex;
-    align-items: flex-start;
-    gap: 60px;
-    width: 100%;
-  }
-  
+  /* DESCRIPTIONS */
   .Luna-descriptions {
-    width: 55%;
     position: relative;
-    min-height: 220px;
-    padding-top: 10px;
-  }
-  
-  .Luna-screen-num {
-    display: block;
-    font-size: 11px;
-    letter-spacing: 2px;
-    text-transform: uppercase;
-    color: #aaa;
-    margin-bottom: 10px;
+    min-height: 180px;
   }
   
   .Luna-desc {
     position: absolute;
-    top: 0;
-    left: 0;
     opacity: 0;
-    transform: translateY(16px);
-    transition: opacity 0.4s ease, transform 0.4s ease;
-    pointer-events: none;
+    transform: translateY(10px);
+    transition: 0.3s;
   }
   
   .Luna-desc.active {
     opacity: 1;
     transform: translateY(0);
-    pointer-events: auto;
     position: relative;
   }
   
   .Luna-desc h3 {
-    font-size: 1.6rem;
-    font-weight: 700;
+    margin: 0 0 10px 0;
     color: #020150;
-    margin: 0 0 14px 0;
-    border-left: 4px solid #020150;
-    padding-left: 14px;
   }
   
   .Luna-desc p {
-    font-size: 1rem;
-    line-height: 1.8;
     color: #555;
-    padding-left: 18px;
+  }
+  
+  /* CENTER CAROUSEL */
+  .Luna-carousel {
+    width: 30%;
+    display: flex;
+    justify-content: center;
   }
   
   .Luna-images {
-    width: 20%;
-    position: relative;
+    width: 280px;
     overflow: hidden;
-    border-radius: 16px;
-    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.12);
+    border-radius: 15px;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+    position: relative;
   }
   
   .Luna-track {
@@ -674,63 +710,50 @@
   
   .Luna-card {
     min-width: 100%;
-    box-sizing: border-box;
   }
   
   .Luna-card img {
     width: 100%;
-    display: block;
   }
   
+  /* BUTTONS */
   .Luna-prev,
   .Luna-next {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
-    background: rgba(2, 1, 80, 0.7);
+    
+    background: rgba(2,1,80,0.8);
     color: white;
     border: none;
     padding: 10px 14px;
     cursor: pointer;
-    font-size: 1rem;
+    font-size: 1.2rem;
+    
     z-index: 10;
-    transition: background 0.2s;
   }
-  
-  .Luna-prev:hover,
-  .Luna-next:hover {
-    background: rgba(2, 1, 80, 1);
-  }
-  
   .Luna-prev {
-    left: 0;
-    border-radius: 0 6px 6px 0;
+    left: -50px;  /* 🔥 pushes it outside */
+    border-radius: 6px;
   }
   
+  /* move RIGHT arrow outside */
   .Luna-next {
-    right: 0;
-    border-radius: 6px 0 0 6px;
+    right: -50px; /* 🔥 pushes it outside */
+    border-radius: 6px;
   }
   
-  .Luna-dots {
-    display: flex;
-    justify-content: center;
-    gap: 8px;
-    padding: 12px 0 4px;
-    background: white;
-  }
+  /* RESPONSIVE */
+  @media (max-width: 768px) {
+    .Luna-layout {
+      flex-direction: column;
+      align-items: center;
+    }
   
-  .Luna-dot {
-    width: 8px;
-    height: 8px;
-    border-radius: 50%;
-    background: #ccc;
-    cursor: pointer;
-    transition: background 0.3s;
-  }
-  
-  .Luna-dot.active {
-    background: #020150;
+    .Luna-left,
+    .Luna-carousel {
+      width: 100%;
+    }
   }
 
   
@@ -776,6 +799,10 @@
     overflow: hidden;
     padding: 100px 8%;
     color: white;
+  }
+  .Pacman-summary-inner {
+    max-width: none;
+    width: 100%;
   }
   
   /* Pixel particles */
@@ -920,4 +947,49 @@
     margin-bottom: 8px;
     line-height: 1.5;
   }
+  .contact-page {
+    background-image: url('assets/ContactBg2.png'); /* full-page background */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 100vh;
+    display: flex;
+    justify-content: center; /* center horizontally */
+    align-items: center;     /* center vertically */
+    padding: 0;
+    margin: 0;
+}
+
+.image-wrapper {
+    position: relative;      /* allows overlay text positioning */
+    display: inline-block;
+    
+}
+
+.contact-img {
+    display: block;
+    width: 800px;  /* adjust size as needed */
+    height: 600px;
+    border-radius: 25px;     /* optional rounded corners */
+    object-fit: cover;
+    opacity: 0.6;
+}
+
+.contact-overlay {
+    position: absolute;      /* overlay on top of image */
+    top: 50%;                /* center vertically */
+    left: 50%;               /* center horizontally */
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: rgb(64, 44, 35);          /* text color */
+    padding: 1rem;
+    background-color: rgb(232, 215, 218);
+    opacity: .6;
+    border-radius: 5%;
+}
+.contact-overlay:hover {
+  opacity: .8;
+
+
+}
   
